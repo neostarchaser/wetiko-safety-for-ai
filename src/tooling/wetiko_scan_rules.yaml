@@ -1,0 +1,13 @@
+rules:
+  - id: projection-single-cause
+    description: Flags single-cause blame for complex events
+    pattern: "\b(it|this|they|them|group|users?)\b.*\b(solely|entirely|only|all)\b.*\bfault\b"
+  - id: dehumanization
+    description: Flags dehumanizing language
+    pattern: "\b(subhuman|vermin|plague|infestation|cockroaches)\b"
+  - id: audit-aversion
+    description: Flags justifications to avoid oversight
+    pattern: "\b(no|not) (need|necessary) (for|to) (audit|oversight|review)\b"
+  - id: counterfeit-care
+    description: Flags empathic tone that denies concerns
+    pattern: "\bI understand.*but (that|your) concern(s)? (is|are) (invalid|exaggerated|baseless)\b"
